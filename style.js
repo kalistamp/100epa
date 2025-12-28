@@ -1,89 +1,226 @@
-let currentQuestions = [];
-let currentQuestionIndex = 0;
-let score = 0;
-
-const startBtn = document.getElementById('start-btn');
-const nextBtn = document.getElementById('next-btn');
-const setupContainer = document.getElementById('setup-container');
-const quizContainer = document.getElementById('quiz-container');
-const resultContainer = document.getElementById('result-container');
-const questionText = document.getElementById('question-text');
-const optionsContainer = document.getElementById('options-container');
-const feedback = document.getElementById('feedback');
-const scoreDisplay = document.getElementById('score');
-const questionNumberDisplay = document.getElementById('question-number');
-
-startBtn.addEventListener('click', () => {
-    const section = document.getElementById('section-select').value;
-    if (section === 'all') {
-        currentQuestions = [...questions.core, ...questions.type1, ...questions.type2, ...questions.type3];
-    } else {
-        currentQuestions = questions[section];
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    // Elements
+    const startScreen = document.getElementById('start-screen');
+    const startBtn = document.getElementById('start-btn');
+    const loadingMsg = document.getElementById('loading-msg');
     
-    // Shuffle questions
-    currentQuestions.sort(() => Math.random() - 0.5);
+    const quizForm = document.getElementById('quiz-form');
+    const quizContainer = document.getElementById('quiz-container');
+    const submitBtn = document.getElementById('submit-btn');
     
-    setupContainer.classList.add('hidden');
-    quizContainer.classList.remove('hidden');
-    showQuestion();
-});
+    const scoreDisplay = document.getElementById('score-display');
+    const scoreValue = document.getElementById('score-value');
+    const scoreMessage = document.getElementById('score-message');
+    const retryBtn = document.getElementById('retry-btn');
+    
+    const wrongAnswersContainer = document.getElementById('wrong-answers-container');
+    const wrongAnswersList = document.getElementById('wrong-answers-list');
 
-function showQuestion() {
-    resetState();
-    const q = currentQuestions[currentQuestionIndex];
-    questionNumberDisplay.innerText = `Question ${currentQuestionIndex + 1}/${currentQuestions.length}`;
-    questionText.innerText = q.question;
+    // Data Storage
+    let fullQuestionPool = []; // All 327 questions
+    let currentExamQuestions = []; // The 100 selected for the current run
 
-    q.options.forEach((option, index) => {
-        const button = document.createElement('button');
-        button.innerText = option;
-        button.classList.add('option-btn');
-        button.addEventListener('click', () => selectOption(button, index, q.answer));
-        optionsContainer.appendChild(button);
+    // 1. Fetch and Parse CSV
+    fetch('questions.csv')
+        .then(response => response.text())
+        .then(csvText => {
+            fullQuestionPool = parseCSV(csvText);
+            // Enable start button once data is loaded
+            loadingMsg.classList.add('hidden');
+            startBtn.disabled = false;
+        })
+        .catch(error => {
+            console.error('Error loading CSV:', error);
+            loadingMsg.innerHTML = '<span style="color:red;">Error loading questions.csv. Please check console.</span>';
+        });
+
+    // 2. Start Exam Logic
+    startBtn.addEventListener('click', () => {
+        startNewExam();
     });
-}
 
-function resetState() {
-    nextBtn.classList.add('hidden');
-    feedback.classList.add('hidden');
-    while (optionsContainer.firstChild) {
-        optionsContainer.removeChild(optionsContainer.firstChild);
-    }
-}
+    function startNewExam() {
+        // Generate 100 random questions (allowing duplicates as requested)
+        currentExamQuestions = [];
+        const totalQuestions = fullQuestionPool.length;
+        
+        for (let i = 0; i < 100; i++) {
+            const randomIndex = Math.floor(Math.random() * totalQuestions);
+            currentExamQuestions.push(fullQuestionPool[randomIndex]);
+        }
 
-function selectOption(button, index, correctIndex) {
-    const allButtons = optionsContainer.querySelectorAll('.option-btn');
-    allButtons.forEach(btn => btn.disabled = true);
-
-    if (index === correctIndex) {
-        button.classList.add('correct');
-        score++;
-        feedback.innerText = "Correct!";
-        feedback.style.color = "green";
-    } else {
-        button.classList.add('incorrect');
-        allButtons[correctIndex].classList.add('correct');
-        feedback.innerText = "Incorrect.";
-        feedback.style.color = "red";
+        renderQuiz();
+        
+        // Switch Views
+        startScreen.classList.add('hidden');
+        scoreDisplay.classList.add('hidden');
+        quizForm.classList.remove('hidden');
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    feedback.classList.remove('hidden');
-    scoreDisplay.innerText = `Score: ${score}`;
-    nextBtn.classList.remove('hidden');
-}
+    // 3. Render Quiz
+    function renderQuiz() {
+        quizContainer.innerHTML = '';
+        currentExamQuestions.forEach((q, index) => {
+            const card = document.createElement('div');
+            card.className = 'question-card';
+            card.dataset.id = index;
 
-nextBtn.addEventListener('click', () => {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < currentQuestions.length) {
-        showQuestion();
-    } else {
-        showResults();
+            let optionsHtml = '';
+            for (const [key, value] of Object.entries(q.options)) {
+                if (value) {
+                    optionsHtml += `
+                        <label id="label-${index}-${key}">
+                            <input type="radio" name="question-${index}" value="${key}">
+                            <span class="opt-text">${key}. ${value}</span>
+                        </label>
+                    `;
+                }
+            }
+
+            card.innerHTML = `
+                <div class="question-text">${index + 1}. ${q.question}</div>
+                <div class="options">${optionsHtml}</div>
+                <div class="feedback" id="feedback-${index}"></div>
+            `;
+            quizContainer.appendChild(card);
+        });
+        
+        // Show Submit button
+        submitBtn.classList.remove('hidden');
+    }
+
+    // 4. Handle Submission
+    submitBtn.addEventListener('click', () => {
+        let score = 0;
+        let wrongAnswers = [];
+
+        currentExamQuestions.forEach((q, index) => {
+            const selected = document.querySelector(`input[name="question-${index}"]:checked`);
+            const feedbackDiv = document.getElementById(`feedback-${index}`);
+            const card = quizContainer.children[index];
+            
+            // Reset styles
+            const labels = card.querySelectorAll('label');
+            labels.forEach(l => l.classList.remove('correct-answer-highlight', 'wrong-answer-highlight'));
+            feedbackDiv.innerHTML = '';
+
+            let userVal = null;
+            if (selected) {
+                userVal = selected.value;
+                if (userVal === q.answer) {
+                    score++;
+                    document.getElementById(`label-${index}-${userVal}`).classList.add('correct-answer-highlight');
+                } else {
+                    document.getElementById(`label-${index}-${userVal}`).classList.add('wrong-answer-highlight');
+                    const correctLabel = document.getElementById(`label-${index}-${q.answer}`);
+                    if(correctLabel) correctLabel.classList.add('correct-answer-highlight');
+                    feedbackDiv.innerHTML = `<span style="color: #721c24;">Incorrect. The correct answer is ${q.answer}.</span>`;
+                    
+                    wrongAnswers.push({
+                        qNum: index + 1,
+                        question: q.question,
+                        userAnswerText: q.options[userVal],
+                        correctAnswerText: q.options[q.answer]
+                    });
+                }
+            } else {
+                // No Answer
+                feedbackDiv.innerHTML = `<span style="color: #721c24;">You didn't answer this question. Correct answer: ${q.answer}</span>`;
+                const correctLabel = document.getElementById(`label-${index}-${q.answer}`);
+                if(correctLabel) correctLabel.classList.add('correct-answer-highlight');
+
+                wrongAnswers.push({
+                    qNum: index + 1,
+                    question: q.question,
+                    userAnswerText: "No Answer Selected",
+                    correctAnswerText: q.options[q.answer]
+                });
+            }
+        });
+
+        // Calculate Score
+        const percentage = Math.round((score / currentExamQuestions.length) * 100);
+        scoreValue.textContent = percentage;
+        
+        if (percentage >= 80) {
+            scoreMessage.textContent = "Great job! You passed.";
+            scoreMessage.style.color = "green";
+        } else {
+            scoreMessage.textContent = "Keep studying and try again.";
+            scoreMessage.style.color = "red";
+        }
+
+        // Generate Wrong Answer Review List
+        if (wrongAnswers.length > 0) {
+            wrongAnswersContainer.classList.remove('hidden');
+            wrongAnswersList.innerHTML = wrongAnswers.map(item => `
+                <li>
+                    <span class="wrong-summary-q">Q${item.qNum}: ${item.question}</span>
+                    <div style="color: #721c24;"><strong>Your Answer:</strong> ${item.userAnswerText}</div>
+                    <div style="color: #155724;"><strong>Correct Answer:</strong> ${item.correctAnswerText}</div>
+                </li>
+            `).join('');
+        } else {
+            wrongAnswersContainer.classList.add('hidden');
+        }
+
+        scoreDisplay.classList.remove('hidden');
+        submitBtn.classList.add('hidden'); // Hide submit after clicking
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 5. Handle Retry (Start New Exam)
+    retryBtn.addEventListener('click', () => {
+        resetUI();
+        startScreen.classList.remove('hidden');
+    });
+
+    function resetUI() {
+        quizForm.classList.add('hidden');
+        scoreDisplay.classList.add('hidden');
+        wrongAnswersContainer.classList.add('hidden');
+        quizContainer.innerHTML = ''; // Clear DOM
+    }
+
+    // CSV Parser
+    function parseCSV(text) {
+        const lines = text.trim().split('\n');
+        const headers = lines[0].split(',').map(h => h.trim());
+        const result = [];
+        // Regex to handle CSV quotes
+        const regex = /(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g;
+
+        for (let i = 1; i < lines.length; i++) {
+            if (!lines[i].trim()) continue;
+
+            const line = lines[i];
+            let matches = [];
+            let match = regex.exec(line);
+            
+            while (match && matches.length < headers.length) {
+                let val = match[1].replace(/^"|"$/g, '').replace(/""/g, '"').trim();
+                matches.push(val);
+                match = regex.exec(line);
+            }
+
+            if (matches.length >= 6) {
+                result.push({
+                    id: i,
+                    question: matches[0],
+                    options: {
+                        A: matches[1],
+                        B: matches[2],
+                        C: matches[3],
+                        D: matches[4]
+                    },
+                    answer: matches[5].toUpperCase()
+                });
+            }
+        }
+        return result;
     }
 });
-
-function showResults() {
-    quizContainer.classList.add('hidden');
-    resultContainer.classList.remove('hidden');
-    document.getElementById('final-score').innerText = `You got ${score} out of ${currentQuestions.length} correct.`;
-}
