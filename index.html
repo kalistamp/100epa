@@ -11,29 +11,41 @@
     <div class="container">
         <header>
             <h1>Practice Certification Exam</h1>
-            <p>Select the best answer for each question below.</p>
-            <button type="button" id="shuffle-btn">Shuffle Questions</button>
         </header>
 
-        <form id="quiz-form">
+        <!-- Start Screen Section -->
+        <div id="start-screen">
+            <p>The exam consists of 100 questions selected randomly from the pool.</p>
+            <p>Click the button below to begin.</p>
+            <p id="loading-msg" class="loading">Loading question database...</p>
+            <button type="button" id="start-btn" disabled>Start Exam</button>
+        </div>
+
+        <!-- Quiz Form (Hidden initially) -->
+        <form id="quiz-form" class="hidden">
             <div id="quiz-container">
-                <p class="loading">Loading questions...</p>
+                <!-- Questions injected here via JS -->
             </div>
 
             <div class="controls">
                 <button type="button" id="submit-btn">Submit Test</button>
-                <button type="button" id="retry-btn" class="hidden">Retake Test</button>
             </div>
         </form>
 
+        <!-- Results Section (Hidden initially) -->
         <div id="score-display" class="hidden">
             <h2>Your Score: <span id="score-value">0</span>%</h2>
             <p id="score-message"></p>
             
+            <div class="controls">
+                <button type="button" id="retry-btn">Start New Exam</button>
+            </div>
+
             <div id="wrong-answers-container" class="hidden">
                 <h3>Review Incorrect Answers:</h3>
                 <ul id="wrong-answers-list">
-                    </ul>
+                    <!-- Wrong answers injected here -->
+                </ul>
             </div>
         </div>
     </div>
