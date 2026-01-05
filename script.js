@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Elements
     const startScreen = document.getElementById('start-screen');
-    const startBtn = document.getElementById('start-btn');
+    // CHANGED: Removed single startBtn, we now select all buttons with class 'start-btn'
+    const startButtons = document.querySelectorAll('.start-btn');
     const loadingMsg = document.getElementById('loading-msg');
     
     const quizForm = document.getElementById('quiz-form');
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Data Storage
     let fullQuestionPool = []; // All questions
-    let currentExamQuestions = []; // The 100 selected
+    let currentExamQuestions = []; // The selected questions
 
     // 1. Fetch and Parse CSV
     // We add a timestamp query parameter (?v=...) to force the browser to download the latest file version
@@ -37,10 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     throw new Error("No questions found in CSV.");
                 }
 
-                // Enable start button once data is loaded
-                loadingMsg.textContent = `Loaded ${fullQuestionPool.length} questions ready.`;
+                // CHANGED: Enable ALL start buttons once data is loaded
+                loadingMsg.textContent = `Loaded ${fullQuestionPool.length} questions ready. Select an option below.`;
                 loadingMsg.style.color = "green";
-                startBtn.disabled = false;
+                startButtons.forEach(btn => btn.disabled = false);
             } catch (e) {
                 console.error("Parsing Error:", e);
                 loadingMsg.innerHTML = `<span style="color:red;">Error parsing questions: ${e.message}</span>`;
@@ -52,14 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     // 2. Start Exam Logic
-    if (startBtn) {
-        startBtn.addEventListener('click', () => {
-            startNewExam();
+    // CHANGED: Loop through all buttons to add event listeners
+    if (startButtons.length > 0) {
+        startButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // Get the number of questions from the data-count attribute
+                const count = parseInt(e.target.dataset.count);
+                startNewExam(count);
+            });
         });
     }
 
-    function startNewExam() {
-        // Generate 100 random questions (allowing duplicates)
+    // CHANGED: Function now accepts the number of questions to generate
+    function startNewExam(questionCount) {
         currentExamQuestions = [];
         const totalQuestions = fullQuestionPool.length;
         
@@ -69,7 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        for (let i = 0; i < 100; i++) {
+        // Ensure we don't ask for more questions than exist in the file (just in case)
+        const limit = Math.min(questionCount, totalQuestions);
+
+        // CHANGED: Loop limit uses the variable passed in, not hardcoded 100
+        for (let i = 0; i < limit; i++) {
             const randomIndex = Math.floor(Math.random() * totalQuestions);
             currentExamQuestions.push(fullQuestionPool[randomIndex]);
         }
