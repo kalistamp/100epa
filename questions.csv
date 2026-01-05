@@ -53,7 +53,6 @@ Which of the following is an HCFC? (Choose all that apply),R-22,R-123,R-124,R-13
 Which of the following refrigerants does the Venting Prohibition cover?,"CFCs, HCFCs, and HFCs",HFOs only,HFCs and HFOs,Ammonia only,A
 Which organization can test your recovery equipment used to service a system with R-12?,Both (A) and (B),AHRI only,UL only,EPA only,A
 Who does not need to maintain proper records of refrigerants?,The EPA,Reclaimers,Appliance owners,Refrigerant wholesalers,A
-Which of the following scenarios are not considered de minimis releases? (Select all that apply),A catastrophic rupture after the appliance was run far past the recommended service date,Releases when servicing a system because recovery was not done with certified equipment,Both A and B,Releases from overpressurization during storage,C
 Equipment that uses nitrogen as a refrigerant is not subject to Section 608 requirements.,True,False,,,A
 What is the next component the refrigerant flows to after passing through the evaporator?,Compressor,Condenser,Metering Device,Evaporator,A
 "As the temperature of a liquid increases, what phase does it turn into?(Assume constant pressure)",Vapor,Solid,Liquid,Plasma,A
@@ -99,16 +98,16 @@ What does HFO stand for?,Hydrofluoroolefins,Hydro-fluoro-oxide,High-fluoro-olefi
 Which of the following do HFOs contain?,Hydrogen,Chlorine,Fluorine,Carbon,A
 Which of the following do HFOs contain? (Select all that apply),Fluorine,Carbon,Both A and B,Halogen,C
 Which statement is true about hydrocarbons?,Are generally A3 refrigerants,Are generally A1 refrigerants,Are generally B1 refrigerants,Are generally B3 refrigerants,A
-"If a refrigerant has an ODP of 0.055, which of the following are true? (Select all that apply)","It contains chlorine","It could be R-22","Both A and B","It has no chlorine","C",,,"R-410A has a GWP of about 2,088. What does this number mean?","It traps roughly 2,088× as much heat as the same mass of CO₂ over 100 years",It traps 2,088 times less heat than CO₂,It has 2,088 ODP,It is 2,088 times safer than CO₂,A
+"If a refrigerant has an ODP of 0.055, which of the following are true? (Select all that apply)","It contains chlorine","It could be R-22","Both A and B","It has no chlorine",C
+"R-410A has a GWP of about 2,088. What does this number mean?","It traps roughly 2,088× as much heat as the same mass of CO₂ over 100 years",It traps 2,088 times less heat than CO₂,It has 2,088 ODP,It is 2,088 times safer than CO₂,A
 Which one of the following refrigerants has the lowest global warming potential (GWP)?,R-1234yf,R-11,R-12,R-22,A
 R-11 is the same as,CFC-11,HFC-11,HCFC-11,HFO-11,A
 R-12 has a GWP in which of the following ranges?,"10,000-50,000","1,000-10,000","100-1,000","Less than 100",A
 R-12 is the same as,CFC-12,HFC-12,HCFC-12,HFO-12,A
 R-1234yf is the same as:,HFO-1234yf,HFC-1234yf,HCFC-1234yf,CFC-1234yf,A
-R-134a is the same as,HFC-134a,HFO-134a,HCFC-134a,CFC-134a,A
+R-134a is the same as:,HFC-134a,HFO-134a,HCFC-134a,CFC-134a,A
 R-410a has a GWP in which of the following ranges?,"1000-10,000","10,000-50,000","100-1,000","Less than 100",A
 R-410a is the same as,HFC-410a,HFO-410a,HCFC-410a,CFC-410a,A
-R-134a is the same as:,HFC-134a,HFO-134a,HCFC-134a,CFC-134a,A
 The GWP of R-290 is greater than which of the following? (Select all that apply),None of these,R-134a,R-410a,R-22,A
 What is the main safety concern with R-410a?,Asphyxia,Flammability,Toxicity,Corrosiveness,A
 What does the new subclass (2L) describe?,Refrigerants that are Class 2 and burn slowly,Refrigerants that are Class 2 and burn quickly,Refrigerants that are Class 1 and burn slowly,Refrigerants that are Class 3 and burn slowly,A
@@ -305,8 +304,9 @@ Polyolester oils are great because they can mix with a lot of other oils.,False,
 "Self-sealing connectors and hand valves are used because they:","Minimize the chance of an explosion","Minimize refrigerant mixing with the refrigerant oil","Minimize refrigerant release when hoses are connected and disconnected","Prevent vapor lock during liquid transfer",C
 "Before filling a cylinder with refrigerant, which step must be performed first?","Purge the cylinder with oxygen","Mix the refrigerant thoroughly","Heat the cylinder","Evacuate the cylinder",D
 "What must be completed before connecting a recovery unit to evacuate refrigerant?","Acid testing the refrigerant.","Flushing the recovery unit using nitrogen.","Replace or top up the recovery unit's oil as needed.","Checking the service valve positions and recovery oil level, when applicable.",D
-"Which of the following would remove non-condensables from a system?","Filter driers","Flushing the system","Both (a) and (b)",,"C"
-"A technician has to make a major repair in an appliance having 1000 pounds of R407C. Which of the following levels must he evacuate the system to? PT Chart","0 psig","25 mm Hg absolute","10 inches of Hg vacuum","15 inches of Hg vacuum","C""A ____ pressure on the ____ side can confirm the presence of non-condensable gases in the system.","lower; suction","higher; suction","lower; discharge","higher; discharge",D
+"Which of the following would remove non-condensables from a system?","Filter driers","Flushing the system","Both (a) and (b)",,C
+"A technician has to make a major repair in an appliance having 1000 pounds of R407C. Which of the following levels must he evacuate the system to? PT Chart","0 psig","25 mm Hg absolute","10 inches of Hg vacuum","15 inches of Hg vacuum",C
+"A ____ pressure on the ____ side can confirm the presence of non-condensable gases in the system.","lower; suction","higher; suction","lower; discharge","higher; discharge",D
 "How can we charge an 80-pound R407C system with air-cooled components?","Vapor charge through the suction service valve","Vapor charge through the liquid-line service valve","Liquid charge through the suction service valve","Liquid charge through the liquid-line service valve",D
 "Refrigerant has been recovered during the replacement of the evaporator coil in an appliance. After the repairs, the refrigerant:","can be filled back into the system","can be sold as it is to another equipment owner","must be reclaimed","must be destroyed",A
 "The risk of water in the appliance freezing while charging an R-410A appliance will remain until the system achieves a pressure of approximately: PT Chart","32 psig","63 psig","90 psig","110 psig",D
