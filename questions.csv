@@ -326,3 +326,15 @@ Polyolester oils are great because they can mix with a lot of other oils.,False,
 "We would take an ____ if a unit has a compressor burnout, and it is considered a ____.","refrigerant sample; major repair","air sample; minor repair","oil sample; major repair","oil sample; normal repair",C
 "When the ____ is closed, the reciprocating compressor might get damaged if it is energized.","discharge service valve","suction service valve","shut-off valve","thermal expansion valve",A
 "After opening a system to repair a small leak, a technician pulls a deep vacuum and prepares to recharge. Which component must be replaced before charging?","Filter drier","Sight glass","Liquid receiver","Crankcase heater",A
+"After a refrigerant is phased out, can technicians still service existing systems that use it?","Yes, if they are 608 certified and use recovered or reclaimed refrigerant","No, never","Yes, but only with new virgin refrigerant","Yes, but only for 1 year after phase-out",A
+"In the United States, when were all CFCs phased out by?",1995,1996,2000,2020,A
+"In the United States, when were R-22 and R-142b phased out?",2020,2010,2030,"Still allowed",A
+"In the United States, when will all HCFCs be phased out?",2030,2020,2040,"No final date",A
+"What appliances do Section 608 regulations apply to?","Freezers","Air conditioners and heat pumps","Commercial refrigeration","All appliances containing regulated refrigerants",D
+"What other appliances do Section 608 regulations apply to? Select the best answer.","Comfort cooling AC","Commercial refrigeration","Both of the above","None",C
+"Who does not need to maintain proper records of refrigerants?","The EPA","Individual technicians","Appliance owners with >50 lbs charge","Wholesalers",A
+"Which of these can be vented? (Select all that apply)","R-717","R-744","R-728","R-134a",A
+"Which organization can test your recovery equipment used to service a system with R-12?","EPA directly","An EPA-approved organization (e.g., AHRI/UL)","Both (A) and (B)","The manufacturer only",C
+"Which of the following are types of low loss fittings? (Select all that apply)","Solder type low loss fittings","Manual low loss fittings","Automatic low loss fittings","Hybrid low loss fittings",B
+"What should we do to recover refrigerant from a system with a compressor that is not working? (Select all that apply)","Tapping the compressor with the biggest a mallet to maximize surface area","Tapping the compressor with a rubber mallet so we don’t damage it","Heating it with a match","Heating it with a heating blanket",B
+"Which of the following would remove non-condensables from a system?","Filter driers","Flushing the system","Both (a) and (b)","None of these",C
