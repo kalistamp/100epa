@@ -6,7 +6,7 @@ What is the passing grade for all EPA certifications?,70%,60%,80%,90%,A
 "Once you pass the EPA exam, the regulations you learned will never change. Is this statement True or False?",True,False,,,B
 Do natural events like volcanic eruptions contribute to chlorine in the stratosphere?,"Yes, chlorine can come from natural sources such as volcanoes, but they are not the primary source","No, volcanoes do not release chlorine","Yes, and they are the only source of chlorine","No, chlorine only comes from refrigerants",A
 Ground level ozone is what absorbs and reflects harmful UV rays from the sun. Is this statement True or False?,True,False,,,B
-In which of the following ways does ozone depletion affect humans?,Increased risk of skin cancer,Increased risk of cataracts,Both A and B,Neither A nor B,C
+In which of the following ways does ozone depletion affect humans?,Increased risk of skin cancer,Increased risk of cataracts,Both A and B,Increased risk of heart disease,C
 Is there evidence that refrigerants are in the stratosphere?,Yes,No,,,A
 Which of the following statements is TRUE about chlorine?,A single chlorine atom can survive in the atmosphere for years,Chlorine dissolves instantly in water,Chlorine is heavier than ozone and sinks immediately,Chlorine is harmless to the ozone layer,A
 Ozone has __ atoms of oxygen.,3,2,1,4,A
@@ -19,61 +19,61 @@ Which of the following are effects of ozone depletion?,Decreasing crop yields,In
 Which refrigerant chemicals are responsible for the destruction of the ozone layer?,CFCs and HCFCs,HFCs and HFOs,Ammonia and Propane,CO2 and Nitrogen,A
 Who does ozone depletion affect?,People all over the world,Only people in the southern hemisphere,Only people near the poles,Only technicians handling refrigerants,A
 The Clean Air Act states that it is a violation to purposely vent refrigerants that deplete ozone.,True,False,,,A
-"After a refrigerant is phased out, can technicians still service existing systems that use it?","Yes, if they are 608 certified and use recovered or reclaimed refrigerant",1995,2000,2010,A
-"In 2025, a technician repairs an R-22 system and needs to add refrigerant to finish the job. Since new production and imports are banned, which sources are allowed for servicing this equipment? (Select all that apply)",From stock recovered R-22 refrigerant only if recovered from the same customer's system,From stock reclaimed R-22,Both A and B,Neither A nor B,C
-Can refrigerant be resold?,"Yes, but only if it has been reclaimed to AHRI Standard 700 specifications",None of the above,Both A and B,Neither A nor B,A
+"After a refrigerant is phased out, can technicians still service existing systems that use it?","Yes, if they are 608 certified and use recovered or reclaimed refrigerant","No, servicing is prohibited after phase out","Yes, but only with virgin refrigerant","No, systems must be retrofitted to new refrigerants",A
+"In 2025, a technician repairs an R-22 system and needs to add refrigerant to finish the job. Since new production and imports are banned, which sources are allowed for servicing this equipment? (Select all that apply)",From stock recovered R-22 refrigerant only if recovered from the same customer's system,From stock reclaimed R-22,Both A and B,From newly produced R-22,C
+Can refrigerant be resold?,"Yes, but only if it has been reclaimed to AHRI Standard 700 specifications","Yes, if recycled but not reclaimed","No, reselling is prohibited","Yes, in any condition",A
 Equipment has to be certified to EPA standards in order to recover which of the following refrigerants? (Select all that apply),CFCs,HCFCs,HFCs,All of the above,D
-"If you are selling R-22 refrigerant, who can you sell to? (Select all that apply)",A technician with Section 608 certification,A business that employs a technician with Section 608 certification,Both A and B,Neither A nor B,C
-"If you recover R-12 refrigerant, can you use the recovered refrigerant in another device owned by a different person?","Yes, but only if it has been reclaimed to AHRI Standard 700 specifications",None of the above,Both A and B,Neither A nor B,A
-"In the United States, when were all CFCs phased out by?",1995,1995,2000,2010,A
+"If you are selling R-22 refrigerant, who can you sell to? (Select all that apply)",A technician with Section 608 certification,A business that employs a technician with Section 608 certification,Both A and B,Any individual without certification,C
+"If you recover R-12 refrigerant, can you use the recovered refrigerant in another device owned by a different person?","Yes, but only if it has been reclaimed to AHRI Standard 700 specifications","Yes, if recycled but not reclaimed","No, only for the same owner","No, it must be destroyed",A
+"In the United States, when were all CFCs phased out by?",1995,1990,2000,2010,A
 "In the United States, when were R-22 and R-142b phased out?",2020,1995,2000,2010,A
-"In the United States, when will all HCFCs be phased out?",2020,1995,2000,2010,A
+"In the United States, when will all HCFCs be phased out?",2030,1995,2000,2010,A
 Which of the following records must be kept for an R-22? (Select all that apply),Type of refrigerant,Dates,Quantity of refrigerant,All of the above,D
-Section 608 of the Clean Air Act is:,Federal law,None of the above,Both A and B,Neither A nor B,A
-State and local regulations _______ (Select all that are true),Have to be followed in addition to federal CAA regulations,May be stricter than federal CAA regulations,Both A and B,Neither A nor B,C
+Section 608 of the Clean Air Act is:,Federal law,State law,Local regulation,International agreement,A
+State and local regulations _______ (Select all that are true),Have to be followed in addition to federal CAA regulations,May be stricter than federal CAA regulations,Both A and B,Can be ignored if federal are followed,C
 The Venting Prohibition requires that you recover affected refrigerant before (Select all that apply):,Opening equipment,Servicing equipment,Disposing of equipment,All of the above,D
-"A scrap yard is taking in old rooftop units. Under Section 608, who must verify that all refrigerant has been removed before disposal?",The final person in the disposal chain,None of the above,Both A and B,Neither A nor B,A
-What appliances do Section 608 regulations apply to?,Freezers,None of the above,Both A and B,Neither A nor B,A
+"A scrap yard is taking in old rooftop units. Under Section 608, who must verify that all refrigerant has been removed before disposal?",The final person in the disposal chain,The original owner of the unit,The EPA inspector,The transporting company,A
+What appliances do Section 608 regulations apply to?,Refrigerators,Microwave ovens,Coffee machines,Toasters,A
 What does SNAP stand for?,Significant New Alternatives Policy,Safe New Alternatives Policy,Super New Alternatives Policy,Standard New Alternatives Policy,A
 "On August 15, 2017, a contractor was cited for two separate Clean Air Act violations. Each violation persists for three consecutive days (Aug 15–17). Based on the 2017 penalty schedule, what is the maximum total civil fine?","$267,234","$10,000","$25,000","$50,000",A
-What change did the 2016 Kigali Amendment make to the Montreal Protocol?,Added a global phase-down schedule for HFCs due to their climate impact,None of the above,Both A and B,Neither A nor B,A
-What is the purpose of Section 608? (Select all that apply),To protect the ozone layer,To regulate use of chemicals that deplete ozone,Both A and B,Neither A nor B,C
+What change did the 2016 Kigali Amendment make to the Montreal Protocol?,Added a global phase-down schedule for HFCs due to their climate impact,Phased out CFCs completely,Banned all HCFCs,Ignored HFCs,A
+What is the purpose of Section 608? (Select all that apply),To protect the ozone layer,To regulate use of chemicals that deplete ozone,Both A and B,To promote energy efficiency,C
 What is the purpose of SNAP? (Select all that apply),To evaluate alternative refrigerants,To further the goals of the CAA,To consider effects of substitute refrigerants on humans,All of the above,D
-What do you do if you discover that you have added Refrigerant B to a system that contained Refrigerant A? Consider that Refrigerant A is ozone-depleting.,Recover the mixture in a separate recovery cylinder,None of the above,Both A and B,Neither A nor B,A
-Who can perform refrigerant recovery from small appliances prior to final disposal?,Any individual with proper equipment,None of the above,Both A and B,Neither A nor B,A
-What other appliances do Section 608 regulations apply to? Select the best answer.,Both of the above,None of the above,Both A and B,Neither A nor B,A
+What do you do if you discover that you have added Refrigerant B to a system that contained Refrigerant A? Consider that Refrigerant A is ozone-depleting.,Recover the mixture in a separate recovery cylinder,Vent the mixture,Use the mixture as is,Reclaim on-site,A
+Who can perform refrigerant recovery from small appliances prior to final disposal?,Any individual with proper equipment,Only certified technicians,The appliance owner,Any trained personnel,A
+What other appliances do Section 608 regulations apply to? Select the best answer.,Air conditioners,Only refrigerators,Only freezers,Water heaters,A
 What penalties can technicians face if they violate the Clean Air Act? (Select all that apply),They may lose their Section 608 certification,They may face federal charges,They may be fined,All of the above,D
-Which of the following scenarios are not considered de minimis releases? (Select all that apply),A catastrophic rupture after the appliance was run far past the recommended service date,Releases when servicing a system because recovery was not done with certified equipment,Both A and B,Neither A nor B,C
+Which of the following scenarios are not considered de minimis releases? (Select all that apply),A catastrophic rupture after the appliance was run far past the recommended service date,Releases when servicing a system because recovery was not done with certified equipment,Both A and B,Normal wear releases during operation,C
 Which of the following are excluded from Section 608 refrigerant management requirements? (Select all that apply),Carbon dioxide,Water,Nitrogen,All of the above,D
-Which of the following are violations of the CAA Venting Prohibition? (Select all that apply),Release of refrigerants because appliances were not recovered,Refrigerants released when disconnecting non low-loss hoses to service an appliance,Both A and B,Neither A nor B,C
+Which of the following are violations of the CAA Venting Prohibition? (Select all that apply),Release of refrigerants because appliances were not recovered,Refrigerants released when disconnecting non low-loss hoses to service an appliance,Both A and B,Intentional venting for pressure relief,C
 Which of the following are considered natural refrigerants? (Select all that apply),R-290,R-600a,R-744,All of the above,D
-Which of the following do you not need Section 608 certification to purchase?,Nitrogen,None of the above,Both A and B,Neither A nor B,A
-Which of the following is a CFC? (Choose all that apply),R-11,R-12,Both A and B,Neither A nor B,C
-Which of the following is an HCFC? (Choose all that apply),R-22,None of the above,Both A and B,Neither A nor B,A
-Which of the following refrigerants does the Venting Prohibition cover?,"CFCs, HCFCs, and HFCs",None of the above,Both A and B,Neither A nor B,A
-Which organization can test your recovery equipment used to service a system with R-12?,Both (A) and (B),None of the above,Both A and B,Neither A nor B,A
-Who does not need to maintain proper records of refrigerants?,The EPA,Technician's home address,Copy of driver's license,Receipt of purchase,A
-Which of the following scenarios are not considered de minimis releases? (Select all that apply),A catastrophic rupture after the appliance was run far past the recommended service date,Releases when servicing a system because recovery was not done with certified equipment,Both A and B,Neither A nor B,C
+Which of the following do you not need Section 608 certification to purchase?,Nitrogen,HFCs,HFOs,HCFCs,A
+Which of the following is a CFC? (Choose all that apply),R-11,R-12,Both A and B,R-22,C
+Which of the following is an HCFC? (Choose all that apply),R-22,R-123,R-124,R-134a,A
+Which of the following refrigerants does the Venting Prohibition cover?,"CFCs, HCFCs, and HFCs",HFOs only,HFCs and HFOs,Ammonia only,A
+Which organization can test your recovery equipment used to service a system with R-12?,Both (A) and (B),AHRI only,UL only,EPA only,A
+Who does not need to maintain proper records of refrigerants?,The EPA,Reclaimers,Appliance owners,Refrigerant wholesalers,A
+Which of the following scenarios are not considered de minimis releases? (Select all that apply),A catastrophic rupture after the appliance was run far past the recommended service date,Releases when servicing a system because recovery was not done with certified equipment,Both A and B,Releases from overpressurization during storage,C
 Equipment that uses nitrogen as a refrigerant is not subject to Section 608 requirements.,True,False,,,A
 What is the next component the refrigerant flows to after passing through the evaporator?,Compressor,Condenser,Metering Device,Evaporator,A
-"As the temperature of a liquid increases, what phase does it turn into?(Assume constant pressure)",Vapor,1995,2000,2010,A
-Does the refrigerant change state in the compressor?,"No, it does not change state",Solid,Liquid,Vapor,A
-"When pressure is increased on a liquid while keeping the temperature constant, what state can the substance change into?",Solid,Liquid,Vapor,None of the above,A
-The refrigerant absorbs heat from your indoor air in order to: (Select all that apply),Change state from liquid to vapor,Make your house cooler,Both A and B,Neither A nor B,C
-Which component has the opposite function to the condenser?,Evaporator,Compressor,Condenser,Metering Device,A
-What is the compressor’s job?,To increase the pressure,None of the above,Both A and B,Neither A nor B,A
-What is the condenser’s job?,To cool the high pressure vapor,None of the above,Both A and B,Neither A nor B,A
-What is the function of the metering device?,To decrease pressure,None of the above,Both A and B,Neither A nor B,A
-What is the state of the refrigerant when it enters the condenser?,High pressure vapor,Solid,Liquid,Vapor,A
-"Inside the metering device, what change does the refrigerant primarily undergo?",Pressure decreases while it remains a liquid,None of the above,Both A and B,Neither A nor B,A
-"When refrigerant exits the metering device, what state is it in?",Low pressure liquid,Solid,Liquid,Vapor,A
-"Inside the compressor, what happens to the refrigerant?",Stays a vapor while pressure increases,None of the above,Both A and B,Neither A nor B,A
-"When the refrigerant enters the evaporator, what state is it in?",Liquid,Solid,Vapor,None of the above,A
-"When the refrigerant exits the evaporator, what state is it in?",Vapor,Solid,Liquid,None of the above,A
-What is the state of the refrigerant when it exits the evaporator?,Low pressure vapor,Solid,Liquid,Vapor,A
-Which of the following components are associated with the high-pressure side of the refrigeration system? (Select all that apply),Compressor,Condenser,Both A and B,Neither A nor B,C
-Which components change the refrigerant’s pressure? (Select all that apply),Compressor,Metering Device,Both A and B,Neither A nor B,C
-Which of the following states has the highest temperature? (Assume constant pressure),Vapor,Solid,Liquid,None of the above,A
+"As the temperature of a liquid increases, what phase does it turn into?(Assume constant pressure)",Vapor,Solid,Liquid,Plasma,A
+Does the refrigerant change state in the compressor?,"No, it does not change state","Yes, to liquid","Yes, to solid","Yes, to plasma",A
+"When pressure is increased on a liquid while keeping the temperature constant, what state can the substance change into?",Solid,Vapor,Gas,Plasma,A
+The refrigerant absorbs heat from your indoor air in order to: (Select all that apply),Change state from liquid to vapor,Make your house cooler,Both A and B,Increase system pressure,C
+Which component has the opposite function to the condenser?,Evaporator,Compressor,Accumulator,Receiver,A
+What is the compressor’s job?,To increase the pressure,To decrease the pressure,To cool the refrigerant,To heat the refrigerant,A
+What is the condenser’s job?,To cool the high pressure vapor,To heat the low pressure vapor,To increase pressure,To decrease pressure,A
+What is the function of the metering device?,To decrease pressure,To increase pressure,To cool the refrigerant,To heat the refrigerant,A
+What is the state of the refrigerant when it enters the condenser?,High pressure vapor,Low pressure vapor,High pressure liquid,Low pressure liquid,A
+"Inside the metering device, what change does the refrigerant primarily undergo?",Pressure decreases while it remains a liquid,Pressure increases while it remains a vapor,Temperature decreases while pressure stays constant,Temperature increases while pressure stays constant,A
+"When refrigerant exits the metering device, what state is it in?",Low pressure liquid,High pressure liquid,Low pressure vapor,High pressure vapor,A
+"Inside the compressor, what happens to the refrigerant?",Stays a vapor while pressure increases,Changes to liquid while pressure decreases,Changes to solid,Becomes supercooled,A
+"When the refrigerant enters the evaporator, what state is it in?",Liquid,Vapor,Gas,Solid,A
+"When the refrigerant exits the evaporator, what state is it in?",Vapor,Liquid,Gas,Solid,A
+What is the state of the refrigerant when it exits the evaporator?,Low pressure vapor,High pressure vapor,Low pressure liquid,High pressure liquid,A
+Which of the following components are associated with the high-pressure side of the refrigeration system? (Select all that apply),Compressor,Condenser,Both A and B,Evaporator,C
+Which components change the refrigerant’s pressure? (Select all that apply),Compressor,Metering Device,Both A and B,Evaporator,C
+Which of the following states has the highest temperature? (Assume constant pressure),Vapor,Liquid,Solid,Plasma,A
 "At constant pressure, boiling requires the addition of heat.",True,False,,,A
 Condensation happens when a gas or vapor cools down and becomes liquid.,True,False,,,A
 "For the same substance and at the same pressure, the average speed of the molecules in a vapor is faster than the average speed of molecules in a liquid.",True,False,,,A
@@ -89,61 +89,61 @@ B2 refrigerants are safer than which one of the following?,B3,R-11,R-12,R-22,A
 What does CFC stand for?,Chlorofluorocarbons,Chloro-fluorine-carbon,Central-fluorocarbon,Chlorinated-fluoro-cells,A
 Which of the following elements do CFCs contain? (Select all that apply),Carbon,Fluorine,Chlorine,All of the above,D
 What does HCFC stand for?,Hydrochlorofluorocarbons,Chloro-fluorine-carbon,Central-fluorocarbon,Chlorinated-fluoro-cells,A
-"Other than fluorine and chlorine, what do HCFCs contain? (Select all that apply)",Hydrogen,Carbon,Both A and B,Neither A nor B,C
-Which of the following elements can be found in HCFCs? (Select all that apply),Fluorine,Chlorine,Both A and B,Neither A nor B,C
+"Other than fluorine and chlorine, what do HCFCs contain? (Select all that apply)",Hydrogen,Carbon,Both A and B,Halogen,C
+Which of the following elements can be found in HCFCs? (Select all that apply),Fluorine,Chlorine,Both A and B,Carbon,C
 What does HFC stand for?,Hydrofluorocarbons,High-fluorocarbons,Hydro-fluoro-cells,Hyper-fluorocarbons,A
 Which of the following atoms is part of an HFC molecule?,Hydrogen,Chlorine,Fluorine,Carbon,A
-"Other than hydrogen, which of the following molecules do HFCs contain? (Select all that apply)",Fluorine,Carbon,Both A and B,Neither A nor B,C
+"Other than hydrogen, which of the following molecules do HFCs contain? (Select all that apply)",Fluorine,Carbon,Both A and B,Halogen,C
 What safety classification do HFO refrigerants typically fall under?,A2L,A1,A2,A3,A
 What does HFO stand for?,Hydrofluoroolefins,Hydro-fluoro-oxide,High-fluoro-olefin,Hydro-fluorine-oxygen,A
 Which of the following do HFOs contain?,Hydrogen,Chlorine,Fluorine,Carbon,A
-Which of the following do HFOs contain? (Select all that apply),Fluorine,Carbon,Both A and B,Neither A nor B,C
-Which statement is true about hydrocarbons?,Are generally A3 refrigerants,None of the above,Both A and B,Neither A nor B,A
-"If a refrigerant has an ODP of 0.055, which of the following are true? (Select all that apply)",It contains chlorine,It could be R-22,Both A and B,Neither A nor B,C
-"R-410A has a GWP of about 2,088. What does this number mean?","It traps roughly 2,088× as much heat as the same mass of CO₂ over 100 years",Carbon Monoxide,Ozone,Methane,A
+Which of the following do HFOs contain? (Select all that apply),Fluorine,Carbon,Both A and B,Halogen,C
+Which statement is true about hydrocarbons?,Are generally A3 refrigerants,Are generally A1 refrigerants,Are generally B1 refrigerants,Are generally B3 refrigerants,A
+"If a refrigerant has an ODP of 0.055, which of the following are true? (Select all that apply)",It contains chlorine,It could be R-22,Both A and B,It has no chlorine,C
+"R-410A has a GWP of about 2,088. What does this number mean?","It traps roughly 2,088× as much heat as the same mass of CO₂ over 100 years",It traps 2,088 times less heat than CO₂,It has 2,088 ODP,It is 2,088 times safer than CO₂,A
 Which one of the following refrigerants has the lowest global warming potential (GWP)?,R-1234yf,R-11,R-12,R-22,A
-R-11 is the same as,CFC-11,None of the above,Both A and B,Neither A nor B,A
-R-12 has a GWP in which of the following ranges?,"10,000-50,000",Carbon Monoxide,Ozone,Methane,A
-R-12 is the same as,CFC-12,None of the above,Both A and B,Neither A nor B,A
-R-1234yf is the same as:,HFO-1234yf,None of the above,Both A and B,Neither A nor B,A
-R-134a is the same as,HFC-134a,None of the above,Both A and B,Neither A nor B,A
-R-410a has a GWP in which of the following ranges?,"1000-10,000",Carbon Monoxide,Ozone,Methane,A
-R-410a is the same as,HFC-410a,None of the above,Both A and B,Neither A nor B,A
-R-134a is the same as:,HFC-134a,None of the above,Both A and B,Neither A nor B,A
-The GWP of R-290 is greater than which of the following? (Select all that apply),None of these,Carbon Monoxide,Ozone,Methane,A
-What is the main safety concern with R-410a?,Asphyxia,A1,A2,A3,A
-What does the new subclass (2L) describe?,Refrigerants that are Class 2 and burn slowly,A1,A2,A3,A
-"What is highest possible ODP for any CFC, HCFC, HFC, or HFO refrigerant?",1,R-11,R-12,R-22,A
-What is the least possible ODP for a refrigerant?,0,R-11,R-12,R-22,A
-What is the ODP of R-441a?,0,100,50,10,A
-What is the ODP of R-600a?,0,100,50,10,A
-Which of the following classes refers to a refrigerant that has low flammability?,Class 2,A1,A2,A3,A
-Which of the following classes refers to a refrigerant that is not flammable at all?,Class 1,A1,A2,A3,A
-Which of the following classes refers to a refrigerant with high toxicity?,Class B,A1,A2,A3,A
-Which of the following classes refers to a refrigerant with low toxicity?,Class A,A1,A2,A3,A
+R-11 is the same as,CFC-11,HFC-11,HCFC-11,HFO-11,A
+R-12 has a GWP in which of the following ranges?,"10,000-50,000","1,000-10,000","100-1,000","Less than 100",A
+R-12 is the same as,CFC-12,HFC-12,HCFC-12,HFO-12,A
+R-1234yf is the same as:,HFO-1234yf,HFC-1234yf,HCFC-1234yf,CFC-1234yf,A
+R-134a is the same as,HFC-134a,HFO-134a,HCFC-134a,CFC-134a,A
+R-410a has a GWP in which of the following ranges?,"1000-10,000","10,000-50,000","100-1,000","Less than 100",A
+R-410a is the same as,HFC-410a,HFO-410a,HCFC-410a,CFC-410a,A
+R-134a is the same as:,HFC-134a,HFO-134a,HCFC-134a,CFC-134a,A
+The GWP of R-290 is greater than which of the following? (Select all that apply),None of these,R-134a,R-410a,R-22,A
+What is the main safety concern with R-410a?,Asphyxia,Flammability,Toxicity,Corrosiveness,A
+What does the new subclass (2L) describe?,Refrigerants that are Class 2 and burn slowly,Refrigerants that are Class 2 and burn quickly,Refrigerants that are Class 1 and burn slowly,Refrigerants that are Class 3 and burn slowly,A
+"What is highest possible ODP for any CFC, HCFC, HFC, or HFO refrigerant?",1,0,0.5,0.1,A
+What is the least possible ODP for a refrigerant?,0,1,0.5,0.1,A
+What is the ODP of R-441a?,0,0.01,0.05,0.1,A
+What is the ODP of R-600a?,0,0.01,0.05,0.1,A
+Which of the following classes refers to a refrigerant that has low flammability?,Class 2,Class 1,Class 3,Class B,A
+Which of the following classes refers to a refrigerant that is not flammable at all?,Class 1,Class 2,Class 3,Class A,A
+Which of the following classes refers to a refrigerant with high toxicity?,Class B,Class A,Class 1,Class 2,A
+Which of the following classes refers to a refrigerant with low toxicity?,Class A,Class B,Class 1,Class 2,A
 Which gas is used as a reference for measuring GWP?,Carbon dioxide,Carbon Monoxide,Ozone,Methane,A
-Which of the following are CFCs? (Choose all that apply),R-12,R-11,Both A and B,Neither A nor B,C
+Which of the following are CFCs? (Choose all that apply),R-12,R-11,Both A and B,R-22,C
 Which of the following are HCFCs that are seen in most refrigeration systems today?,R-22,R-11,R-12,R-134a,A
 Which of the following are HCFCs? (Choose all that apply),R-22,R-123,R-124,All of the above,D
-Which of the following refrigerants are HFCs? (Select all that apply),R-134a,R-32,Both A and B,Neither A nor B,C
-Why are HFCs still considered harmful to the environment?,Because they increase global warming,None of the above,Both A and B,Neither A nor B,A
-What is the chemical name for the HFO refrigerant R-1234yf commonly used in HVAC systems?,Tetrafluoropropene,R-11,R-12,R-22,A
-Which of the following statements about carbon dioxide is true? (Select all that apply),Carbon dioxide has a GWP of 1,Carbon dioxide has an ODP of 0,Both A and B,Neither A nor B,C
-Which of the following are natural refrigerants? (Select all that apply),R-600a,HC-600a,Both A and B,Neither A nor B,C
-Which of the following is NOT a natural refrigerant?,R-130,R-11,R-12,R-22,A
-Which of the following refrigerants do not destroy the ozone layer? (Select all that apply),R-1234yf,R-744,Both A and B,Neither A nor B,C
-Which safety classification of refrigerants is most dangerous to use?,B3,A1,A2,A3,A
-A contractor must choose a refrigerant class for use in an occupied classroom where the lowest combined toxicity and flammability risk is required under ASHRAE Standard 34. Which classification is the best fit?,A1,A2,A3,B1,A
-A technician is sorting old cylinders by their impact on ozone before disposal. Which type should be flagged as most harmful to the ozone layer?,CFCs,None of the above,Both A and B,Neither A nor B,A
-Which of the following refrigerants have little to no impact on the ozone layer? (Select all that apply),HFCs,HFOs,Both A and B,Neither A nor B,C
-Which types of refrigerants have the lowest GWPs? (Select two),HFOs,HCs,Both A and B,Neither A nor B,C
+Which of the following refrigerants are HFCs? (Select all that apply),R-134a,R-32,Both A and B,R-22,C
+Why are HFCs still considered harmful to the environment?,Because they increase global warming,Because they deplete ozone,Because they are flammable,Because they are toxic,A
+What is the chemical name for the HFO refrigerant R-1234yf commonly used in HVAC systems?,Tetrafluoropropene,Trifluoropropene,Difluoropropene,Monofluoropropene,A
+Which of the following statements about carbon dioxide is true? (Select all that apply),Carbon dioxide has a GWP of 1,Carbon dioxide has an ODP of 0,Both A and B,Carbon dioxide has an ODP of 1,C
+Which of the following are natural refrigerants? (Select all that apply),R-600a,HC-600a,Both A and B,R-134a,C
+Which of the following is NOT a natural refrigerant?,R-130,R-744,R-717,R-290,A
+Which of the following refrigerants do not destroy the ozone layer? (Select all that apply),R-1234yf,R-744,Both A and B,R-22,C
+Which safety classification of refrigerants is most dangerous to use?,B3,A3,B2,A2,A
+A contractor must choose a refrigerant class for use in an occupied classroom where the lowest combined toxicity and flammability risk is required under ASHRAE Standard 34. Which classification is the best fit?,A1,A2L,B1,A3,A
+A technician is sorting old cylinders by their impact on ozone before disposal. Which type should be flagged as most harmful to the ozone layer?,CFCs,HFCs,HFOs,HCs,A
+Which of the following refrigerants have little to no impact on the ozone layer? (Select all that apply),HFCs,HFOs,Both A and B,HCFCs,C
+Which types of refrigerants have the lowest GWPs? (Select two),HFOs,HCs,Both A and B,HCFCs,C
 Ammonia is safe to use because it is a natural refrigerant.,True,False,,,B
 GWP measures how much heat a greenhouse gas traps in the atmosphere over 100 years compared to carbon monoxide.,True,False,,,B
 "If a gas has a GWP of 50, it means it has 50 times less global warming potential than carbon dioxide.",True,False,,,B
 "R-410a is an A1 refrigerant. It is considered non-toxic and non-flammable under normal operating conditions, making it one of the safest refrigerants to use.",True,False,,,A
 The GWPs of HFOs and HCs are close to those of HCFCs.,True,False,,,B
 The lowest number for an ozone depletion potential (ODP) is 1.,True,False,,,B
-Which of the following statements about fractionation of refrigerants is true? (select all that apply),Is when refrigerants settle into layers,Happens in vapor phase,Both A and B,Neither A nor B,C
+Which of the following statements about fractionation of refrigerants is true? (select all that apply),Is when refrigerants settle into layers,Happens in vapor phase,Both A and B,Happens only in liquid phase,C
 What is temperature glide?,The difference between the bubble and dew point,The difference between suction and discharge,The sum of superheat and subcooling,The critical temperature point,A
 What is bubble point?,The temperature at which the first refrigerant in a blend turns to vapor,The temperature at which the first refrigerant turns to liquid,The temperature at which the mixture freezes,The critical pressure point,A
 What is the definition of dew point?,The temperature at which the first refrigerant in a blend turns to liquid,The temperature at which the first refrigerant turns to vapor,The temperature at which the mixture boils,The triple point of the blend,A
