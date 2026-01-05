@@ -45,19 +45,21 @@ h1 {
     padding: 20px;
 }
 
-#start-btn {
+/* CHANGED: Styles for the new button options */
+.start-btn {
     background-color: #28a745; /* Green for start */
-    font-size: 1.2em;
-    padding: 15px 30px;
-    margin-top: 20px;
+    font-size: 1.1em;
+    padding: 15px 20px;
+    margin: 10px; /* Added margin so buttons don't touch */
+    min-width: 150px; /* Ensure uniform width */
 }
 
-#start-btn:disabled {
+.start-btn:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
 
-#start-btn:hover:not(:disabled) {
+.start-btn:hover:not(:disabled) {
     background-color: #218838;
 }
 
