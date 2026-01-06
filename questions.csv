@@ -326,15 +326,12 @@ Polyolester oils are great because they can mix with a lot of other oils.,False,
 "We would take an ____ if a unit has a compressor burnout, and it is considered a ____.","refrigerant sample; major repair","air sample; minor repair","oil sample; major repair","oil sample; normal repair",C
 "When the ____ is closed, the reciprocating compressor might get damaged if it is energized.","discharge service valve","suction service valve","shut-off valve","thermal expansion valve",A
 "After opening a system to repair a small leak, a technician pulls a deep vacuum and prepares to recharge. Which component must be replaced before charging?","Filter drier","Sight glass","Liquid receiver","Crankcase heater",A
-"After a refrigerant is phased out, can technicians still service existing systems that use it?","Yes, if they are 608 certified and use recovered or reclaimed refrigerant","No, never","Yes, but only with new virgin refrigerant","Yes, but only for 1 year after phase-out",A
-"In the United States, when were all CFCs phased out by?",1995,1996,2000,2020,A
-"In the United States, when were R-22 and R-142b phased out?",2020,2010,2030,"Still allowed",A
-"In the United States, when will all HCFCs be phased out?",2030,2020,2040,"No final date",A
-"What appliances do Section 608 regulations apply to?","Freezers","Air conditioners and heat pumps","Commercial refrigeration","All appliances containing regulated refrigerants",D
-"What other appliances do Section 608 regulations apply to? Select the best answer.","Comfort cooling AC","Commercial refrigeration","Both of the above","None",C
-"Who does not need to maintain proper records of refrigerants?","The EPA","Individual technicians","Appliance owners with >50 lbs charge","Wholesalers",A
-"Which of these can be vented? (Select all that apply)","R-717","R-744","R-728","R-134a",A
-"Which organization can test your recovery equipment used to service a system with R-12?","EPA directly","An EPA-approved organization (e.g., AHRI/UL)","Both (A) and (B)","The manufacturer only",C
-"Which of the following are types of low loss fittings? (Select all that apply)","Solder type low loss fittings","Manual low loss fittings","Automatic low loss fittings","Hybrid low loss fittings",B
-"What should we do to recover refrigerant from a system with a compressor that is not working? (Select all that apply)","Tapping the compressor with the biggest a mallet to maximize surface area","Tapping the compressor with a rubber mallet so we don’t damage it","Heating it with a match","Heating it with a heating blanket",B
-"Which of the following would remove non-condensables from a system?","Filter driers","Flushing the system","Both (a) and (b)","None of these",C
+"After the refrigerant leaves the purge unit, where does it go?","Condenser","Recovery Cylinder","Evaporator","Compressor",C
+"Which classification best describes R-123's toxicity according to ASHRAE safety rating?","Low toxicity","High toxicity","Medium toxicity","Non-toxic",B
+"What is the ASHRAE safety rating of R-1233zd?","B1","B2","A1","A2",C
+"What is the boiling point of R-123?","74.9 ℉","82 ℉","-41.3 ℉","-55.4 ℉",B
+"What is the pressure of R-123 when it boils at 82°Fahrenheit?","20 inches Hg","18.1 inches Hg","20.6 psig","14.7 psia",D
+"While preparing to charge a low-pressure chiller, you check the safety limit for over-pressure protection. The rupture disc is designed to burst at:","10 psig","15 psig","5 psig","20 psig",B
+"Which of the following components are only found in Type 3 appliances?","Compressor","Purge Unit","Condenser","Evaporator",B
+"Which of the following is not a Type 3 refrigerant?","R-11","R-22","R-123","R-1233zd",B
+"Which of the following refrigerants would be used in a low-pressure appliance?","R-22","R-123","R-410A","R-407A",B
