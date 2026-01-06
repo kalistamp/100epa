@@ -55,35 +55,35 @@ Who does ozone depletion affect?,People all over the world,Only people in the so
 "Who does not need to maintain proper records of refrigerants?","Wholesalers","The EPA","Reclaimers","Owners and technicians",B
 "Which of the following scenarios are not considered de minimis releases?","A catastrophic rupture after the appliance was run far past the recommended service date","Releases when connecting or disconnecting hoses with low-loss fittings","Releases when servicing a system because recovery was not done with certified equipment","A brief puff when disconnecting certified recovery equipment after recovery is complete",A
 "Equipment that uses nitrogen as a refrigerant is not subject to Section 608 requirements.",True,False,,,A
-What is the next component the refrigerant flows to after passing through the evaporator?,Compressor,Condenser,Metering Device,Evaporator,A
-"As the temperature of a liquid increases, what phase does it turn into?(Assume constant pressure)",Vapor,1995,2000,2010,A
-Does the refrigerant change state in the compressor?,"No, it does not change state",Solid,Liquid,Vapor,A
-"When pressure is increased on a liquid while keeping the temperature constant, what state can the substance change into?",Solid,Liquid,Vapor,None of the above,A
-The refrigerant absorbs heat from your indoor air in order to: (Select all that apply),Change state from liquid to vapor,Make your house cooler,Both A and B,Neither A nor B,C
-Which component has the opposite function to the condenser?,Evaporator,Compressor,Condenser,Metering Device,A
-What is the compressor’s job?,To increase the pressure,None of the above,Both A and B,Neither A nor B,A
-What is the condenser’s job?,To cool the high pressure vapor,None of the above,Both A and B,Neither A nor B,A
-What is the function of the metering device?,To decrease pressure,None of the above,Both A and B,Neither A nor B,A
-What is the state of the refrigerant when it enters the condenser?,High pressure vapor,Solid,Liquid,Vapor,A
-"Inside the metering device, what change does the refrigerant primarily undergo?",Pressure decreases while it remains a liquid,None of the above,Both A and B,Neither A nor B,A
-"When refrigerant exits the metering device, what state is it in?",Low pressure liquid,Solid,Liquid,Vapor,A
-"Inside the compressor, what happens to the refrigerant?",Stays a vapor while pressure increases,None of the above,Both A and B,Neither A nor B,A
-"When the refrigerant enters the evaporator, what state is it in?",Liquid,Solid,Vapor,None of the above,A
-"When the refrigerant exits the evaporator, what state is it in?",Vapor,Solid,Liquid,None of the above,A
-What is the state of the refrigerant when it exits the evaporator?,Low pressure vapor,Solid,Liquid,Vapor,A
-Which of the following components are associated with the high-pressure side of the refrigeration system? (Select all that apply),Compressor,Condenser,Both A and B,Neither A nor B,C
-Which components change the refrigerant’s pressure? (Select all that apply),Compressor,Metering Device,Both A and B,Neither A nor B,C
-Which of the following states has the highest temperature? (Assume constant pressure),Vapor,Solid,Liquid,None of the above,A
+"What is the next component the refrigerant flows to after passing through the evaporator?","Condenser","Compressor","Metering Device","Your AC Unit",B
+"As the temperature of a liquid increases, what phase does it turn into?(Assume constant pressure)","Solid","Liquid","Vapor","Water",C
+"Does the refrigerant change state in the compressor?","Yes, it changes from a vapor to a liquid","Yes it changes from a liquid to a vapor","Yes, it changes from a liquid to a solid","No, it does not change state",D
+"When pressure is increased on a liquid while keeping the temperature constant, what state can the substance change into?","Solid","Liquid","Vapor","Water",A
+"The refrigerant absorbs heat from your indoor air in order to:","Make your house hotter","Change state from liquid to vapor","Make your house cooler","None of the above",B
+"Which component has the opposite function to the condenser?","Evaporator","Compressor","Metering Device","Suction Line",A
+"What is the compressor’s job?","To cool the superheated vapor","To decrease the temperature","To increase the pressure","All of the above",C
+"What is the condenser’s job?","To cool the high pressure vapor","To heat the high pressure vapor","To increase the pressure","To decrease the pressure",A
+"What is the function of the metering device?","To decrease pressure","To increase pressure","To increase temperature","All of the above",A
+"What is the state of the refrigerant when it enters the condenser?","High pressure liquid","Low pressure liquid","High pressure vapor","Low pressure vapor",C
+"Inside the metering device, what change does the refrigerant primarily undergo?","Pressure increases while it remains a vapor","Pressure decreases while it remains a liquid","Temperature rises and it condenses to liquid","It boils into vapor at higher pressure",B
+"When refrigerant exits the metering device, what state is it in?","Low pressure liquid","High pressure liquid","Low pressure vapor","High pressure vapor",A
+"Inside the compressor, what happens to the refrigerant?","Condenses to liquid at higher pressure","Freezes into a solid as it cools","Stays a vapor while pressure increases","Evaporates from liquid to vapor",C
+"When the refrigerant enters the evaporator, what state is it in?","Solid","Liquid","Vapor","Water",B
+"When the refrigerant exits the evaporator, what state is it in?","Solid","Liquid","Vapor","Water",C
+"What is the state of the refrigerant when it exits the evaporator?","Low pressure liquid","High pressure vapor","Low pressure vapor","High pressure liquid",C
+"Which of the following components are associated with the high-pressure side of the refrigeration system?","Evaporator","Compressor","Condenser","Metering Device",B
+"Which components change the refrigerant’s pressure?","Evaporator","Compressor","Condenser","Metering Device",B
+"Which of the following states has the highest temperature? (Assume constant pressure)","Solid","Liquid","Vapor","Water",C
 "At constant pressure, boiling requires the addition of heat.",True,False,,,A
-Condensation happens when a gas or vapor cools down and becomes liquid.,True,False,,,A
+"Condensation happens when a gas or vapor cools down and becomes liquid.",True,False,,,A
 "For the same substance and at the same pressure, the average speed of the molecules in a vapor is faster than the average speed of molecules in a liquid.",True,False,,,A
 "If we decrease the pressure of a substance, its boiling point decreases.",True,False,,,A
 "In the condenser, the refrigerant changes state.",True,False,,,A
-The boiling point is the temperature at which a substance changes from a liquid state to a vapor or gas state.,True,False,,,A
-The boiling point of most refrigerants is 212 °F.,True,False,,,B
-The vapor leaving the compressor is lower in pressure than vapor entering the compressor.,True,False,,,B
+"The boiling point is the temperature at which a substance changes from a liquid state to a vapor or gas state.",True,False,,,A
+"The boiling point of most refrigerants is 212 °F.",True,False,,,B
+"The vapor leaving the compressor is lower in pressure than vapor entering the compressor.",True,False,,,B
 "You are boiling a pot of water with the lid on. As the water heats up and starts to boil, you notice that drops of water form on the bottom of the pot lid. This is an example of condensation.",True,False,,,A
-Your air conditioning works by adding cold air into your house.,True,False,,,B
+"Your air conditioning works by adding cold air into your house.",True,False,,,B
 B2 refrigerants are more dangerous than which of the following?,B1,A2,Both above,Other,C
 B2 refrigerants are safer than which one of the following?,B1,B3,A2,A3,B
 What does CFC stand for?,Chlorofluorocarbons,Chloro-fluorine-carbon,Central-fluorocarbon,Chlorinated-fluoro-cells,A
