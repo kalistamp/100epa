@@ -72,7 +72,7 @@ Who does ozone depletion affect?,People all over the world,Only people in the so
 "When the refrigerant exits the evaporator, what state is it in?","Solid","Liquid","Vapor","Water",C
 "What is the state of the refrigerant when it exits the evaporator?","Low pressure liquid","High pressure vapor","Low pressure vapor","High pressure liquid",C
 "Which of the following components are associated with the high-pressure side of the refrigeration system?","Evaporator","Compressor","Condenser","Metering Device",B
-"Which components change the refrigerant’s pressure?","Evaporator","Compressor","Condenser","Metering Device",B
+"Which components change the refrigerant’s pressure?","Evaporator","Compressor","Condenser","Metering Device","B,D"
 "Which of the following states has the highest temperature? (Assume constant pressure)","Solid","Liquid","Vapor","Water",C
 "At constant pressure, boiling requires the addition of heat.",True,False,,,A
 "Condensation happens when a gas or vapor cools down and becomes liquid.",True,False,,,A
