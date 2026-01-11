@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Elements
     const startScreen = document.getElementById('start-screen');
-    // CHANGED: Removed single startBtn, we now select all buttons with class 'start-btn'
     const startButtons = document.querySelectorAll('.start-btn');
     const loadingMsg = document.getElementById('loading-msg');
     
@@ -18,27 +17,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const wrongAnswersList = document.getElementById('wrong-answers-list');
 
     // Data Storage
-    let fullQuestionPool = []; // All questions
-    let currentExamQuestions = []; // The selected questions
+    let fullQuestionPool = [];
+    let currentExamQuestions = [];
 
     // 1. Fetch and Parse CSV
-    // We add a timestamp query parameter (?v=...) to force the browser to download the latest file version
     fetch('questions.csv?v=' + new Date().getTime())
         .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return response.text();
         })
         .then(csvText => {
             try {
                 fullQuestionPool = parseCSV(csvText);
-                
-                if (fullQuestionPool.length === 0) {
-                    throw new Error("No questions found in CSV.");
-                }
+                if (fullQuestionPool.length === 0) throw new Error("No questions found in CSV.");
 
-                // CHANGED: Enable ALL start buttons once data is loaded
                 loadingMsg.textContent = `Loaded ${fullQuestionPool.length} questions ready. Select an option below.`;
                 loadingMsg.style.color = "green";
                 startButtons.forEach(btn => btn.disabled = false);
@@ -49,48 +41,37 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
             console.error('Fetch Error:', error);
-            loadingMsg.innerHTML = `<span style="color:red;">Error loading database: ${error.message}<br>Make sure 'questions.csv' is in the main folder.</span>`;
+            loadingMsg.innerHTML = `<span style="color:red;">Error loading database: ${error.message}</span>`;
         });
 
     // 2. Start Exam Logic
-    // CHANGED: Loop through all buttons to add event listeners
     if (startButtons.length > 0) {
         startButtons.forEach(btn => {
             btn.addEventListener('click', (e) => {
-                // Get the number of questions from the data-count attribute
                 const count = parseInt(e.target.dataset.count);
                 startNewExam(count);
             });
         });
     }
 
-    // CHANGED: Function now accepts the number of questions to generate
     function startNewExam(questionCount) {
         currentExamQuestions = [];
         const totalQuestions = fullQuestionPool.length;
         
-        // Safety check
         if (totalQuestions === 0) {
             alert("No questions loaded.");
             return;
         }
 
-        // Ensure we don't ask for more questions than exist in the file (just in case)
         const limit = Math.min(questionCount, totalQuestions);
-
-        // CHANGED: Loop limit uses the variable passed in, not hardcoded 100
-        for (let i = 0; i < limit; i++) {
-            const randomIndex = Math.floor(Math.random() * totalQuestions);
-            currentExamQuestions.push(fullQuestionPool[randomIndex]);
-        }
+        const shuffled = [...fullQuestionPool].sort(() => 0.5 - Math.random());
+        currentExamQuestions = shuffled.slice(0, limit);
 
         renderQuiz();
         
-        // Switch Views
         startScreen.classList.add('hidden');
         scoreDisplay.classList.add('hidden');
         quizForm.classList.remove('hidden');
-        
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -102,20 +83,33 @@ document.addEventListener('DOMContentLoaded', () => {
             card.className = 'question-card';
             card.dataset.id = index;
 
+            // Determine if Multi-Select
+            // We strip quotes just in case, though the parser handles it.
+            // If comma exists, it's multi-select.
+            const isMultiSelect = q.answer.includes(',');
+            const inputType = isMultiSelect ? 'checkbox' : 'radio';
+            const instructionHtml = isMultiSelect 
+                ? '<span class="multi-badge">Select all that apply</span>' 
+                : '';
+
             let optionsHtml = '';
             for (const [key, value] of Object.entries(q.options)) {
                 if (value) {
                     optionsHtml += `
-                        <label id="label-${index}-${key}">
-                            <input type="radio" name="question-${index}" value="${key}">
-                            <span class="opt-text">${key}. ${value}</span>
+                        <label id="label-${index}-${key}" class="option-label">
+                            <input type="${inputType}" name="question-${index}" value="${key}">
+                            <span class="opt-text"><strong>${key}.</strong> ${value}</span>
                         </label>
                     `;
                 }
             }
 
             card.innerHTML = `
-                <div class="question-text">${index + 1}. ${q.question}</div>
+                <div class="question-header">
+                    <span class="q-number">${index + 1}.</span>
+                    <span class="q-text">${q.question}</span>
+                </div>
+                ${instructionHtml}
                 <div class="options">${optionsHtml}</div>
                 <div class="feedback" id="feedback-${index}"></div>
             `;
@@ -132,45 +126,54 @@ document.addEventListener('DOMContentLoaded', () => {
             let wrongAnswers = [];
 
             currentExamQuestions.forEach((q, index) => {
-                const selected = document.querySelector(`input[name="question-${index}"]:checked`);
-                const feedbackDiv = document.getElementById(`feedback-${index}`);
                 const card = quizContainer.children[index];
+                const feedbackDiv = document.getElementById(`feedback-${index}`);
                 
+                // Get User Answers
+                const checkedInputs = card.querySelectorAll(`input[name="question-${index}"]:checked`);
+                const userValues = Array.from(checkedInputs).map(input => input.value);
+                
+                // Get Correct Answers (Handle "A,B" -> ["A", "B"])
+                const correctValues = q.answer.split(',').map(val => val.trim());
+
                 // Reset styles
                 const labels = card.querySelectorAll('label');
-                labels.forEach(l => l.classList.remove('correct-answer-highlight', 'wrong-answer-highlight'));
+                labels.forEach(l => l.classList.remove('correct-highlight', 'wrong-highlight', 'missed-highlight'));
                 feedbackDiv.innerHTML = '';
 
-                let userVal = null;
-                if (selected) {
-                    userVal = selected.value;
-                    if (userVal === q.answer) {
-                        score++;
-                        document.getElementById(`label-${index}-${userVal}`).classList.add('correct-answer-highlight');
-                    } else {
-                        document.getElementById(`label-${index}-${userVal}`).classList.add('wrong-answer-highlight');
-                        const correctLabel = document.getElementById(`label-${index}-${q.answer}`);
-                        if(correctLabel) correctLabel.classList.add('correct-answer-highlight');
-                        feedbackDiv.innerHTML = `<span style="color: #721c24;">Incorrect. The correct answer is ${q.answer}.</span>`;
-                        
-                        wrongAnswers.push({
-                            qNum: index + 1,
-                            question: q.question,
-                            userAnswerText: q.options[userVal],
-                            correctAnswerText: q.options[q.answer]
-                        });
-                    }
-                } else {
-                    // No Answer
-                    feedbackDiv.innerHTML = `<span style="color: #721c24;">You didn't answer this question. Correct answer: ${q.answer}</span>`;
-                    const correctLabel = document.getElementById(`label-${index}-${q.answer}`);
-                    if(correctLabel) correctLabel.classList.add('correct-answer-highlight');
+                // Grading Logic (Strict Equality)
+                // Sort both arrays to ensure order doesn't matter (A,B == B,A)
+                const sortedUser = [...userValues].sort();
+                const sortedCorrect = [...correctValues].sort();
+                const isCorrect = JSON.stringify(sortedUser) === JSON.stringify(sortedCorrect);
 
+                // Visual Feedback
+                // 1. Highlight ALL correct answers in Green (whether selected or not)
+                correctValues.forEach(val => {
+                    const lbl = document.getElementById(`label-${index}-${val}`);
+                    if(lbl) lbl.classList.add('correct-highlight');
+                });
+
+                // 2. Highlight incorrect user selections in Red
+                userValues.forEach(val => {
+                    if (!correctValues.includes(val)) {
+                        const lbl = document.getElementById(`label-${index}-${val}`);
+                        if(lbl) lbl.classList.add('wrong-highlight');
+                    }
+                });
+
+                if (isCorrect) {
+                    score++;
+                } else {
+                    // Generate Wrong Answer Message
+                    const userText = userValues.length > 0 ? userValues.join(', ') : "None";
+                    feedbackDiv.innerHTML = `<span style="color: #721c24; font-weight:bold;">Incorrect.</span> Correct Answer: ${q.answer}`;
+                    
                     wrongAnswers.push({
                         qNum: index + 1,
                         question: q.question,
-                        userAnswerText: "No Answer Selected",
-                        correctAnswerText: q.options[q.answer]
+                        userAnswerText: userValues.map(v => `${v}) ${q.options[v]}`).join(', ') || "No Answer",
+                        correctAnswerText: correctValues.map(v => `${v}) ${q.options[v]}`).join(', ')
                     });
                 }
             });
@@ -181,20 +184,22 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (percentage >= 80) {
                 scoreMessage.textContent = "Great job! You passed.";
-                scoreMessage.style.color = "green";
+                scoreMessage.className = "pass-msg";
             } else {
                 scoreMessage.textContent = "Keep studying and try again.";
-                scoreMessage.style.color = "red";
+                scoreMessage.className = "fail-msg";
             }
 
-            // Generate Wrong Answer Review List
+            // Results UI
             if (wrongAnswers.length > 0) {
                 wrongAnswersContainer.classList.remove('hidden');
                 wrongAnswersList.innerHTML = wrongAnswers.map(item => `
                     <li>
-                        <span class="wrong-summary-q">Q${item.qNum}: ${item.question}</span>
-                        <div style="color: #721c24;"><strong>Your Answer:</strong> ${item.userAnswerText}</div>
-                        <div style="color: #155724;"><strong>Correct Answer:</strong> ${item.correctAnswerText}</div>
+                        <div class="summary-q"><strong>Q${item.qNum}:</strong> ${item.question}</div>
+                        <div class="summary-compare">
+                            <div class="user-ans"><strong>You:</strong> ${item.userAnswerText}</div>
+                            <div class="correct-ans"><strong>Correct:</strong> ${item.correctAnswerText}</div>
+                        </div>
                     </li>
                 `).join('');
             } else {
@@ -203,12 +208,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             scoreDisplay.classList.remove('hidden');
             submitBtn.classList.add('hidden');
-            
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
-    // 5. Handle Retry
+    // 5. Retry
     if (retryBtn) {
         retryBtn.addEventListener('click', () => {
             resetUI();
@@ -223,10 +227,9 @@ document.addEventListener('DOMContentLoaded', () => {
         quizContainer.innerHTML = ''; 
     }
 
-    // Robust CSV Parser
+    // Robust CSV Parser (Handle Quotes)
     function parseCSV(text) {
         const lines = text.trim().split('\n');
-        // Parse Headers
         const headers = lines[0].split(',').map(h => h.trim());
         const result = [];
         
@@ -238,22 +241,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const line = lines[i];
             let matches = [];
-            
-            // IMPORTANT: Reset regex state for each new line
             regex.lastIndex = 0;
-            
             let match = regex.exec(line);
             
             while (match && matches.length < headers.length) {
-                // match[1] is the captured group. If undefined, treat as empty string.
                 let rawVal = match[1] || "";
-                // Remove surrounding quotes and unescape double quotes
                 let val = rawVal.replace(/^"|"$/g, '').replace(/""/g, '"').trim();
                 matches.push(val);
                 match = regex.exec(line);
             }
 
-            // Ensure we have enough columns (headers: Question, A, B, C, D, Answer)
             if (matches.length >= 6) {
                 result.push({
                     id: i,
@@ -264,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         C: matches[3],
                         D: matches[4]
                     },
-                    answer: matches[5].toUpperCase()
+                    answer: matches[5].toUpperCase().replace(/\s/g, '') // remove spaces from "A, B"
                 });
             }
         }
