@@ -143,7 +143,7 @@ What is the passing grade for all EPA certifications?,70%,60%,80%,90%,A
 "R-410a is an A1 refrigerant. It is considered non-toxic and non-flammable under normal operating conditions, making it one of the safest refrigerants to use.",True,False,,,A
 "The GWPs of HFOs and HCs are close to those of HCFCs.",True,False,,,B
 "The lowest number for an ozone depletion potential (ODP) is 1.",True,False,,,B
-Which of the following statements about fractionation of refrigerants is true? (select all that apply),Is when refrigerants settle into layers,Happens in vapor phase,Both A and B,Neither A nor B,"A,B"
+Which of the following statements about fractionation of refrigerants is true? (select all that apply),Is when refrigerants settle into layers,Happens in vapor phase,Happens in liquid phase,Happens in solid phase,"A,B"
 What is temperature glide?,The difference between the bubble and dew point,The difference between suction and discharge,The sum of superheat and subcooling,The critical temperature point,A
 What is bubble point?,The temperature at which the first refrigerant in a blend turns to vapor,The temperature at which the first refrigerant turns to liquid,The temperature at which the mixture freezes,The critical pressure point,A
 What is the definition of dew point?,The temperature at which the first refrigerant in a blend turns to liquid,The temperature at which the first refrigerant turns to vapor,The temperature at which the mixture boils,The triple point of the blend,A
