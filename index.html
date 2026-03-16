@@ -6,12 +6,6 @@
     <title>Practice Certification Exam</title>
     <link rel="stylesheet" href="style.css">
 
-    <!-- PWA -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="EPA 608">
-    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 
@@ -64,15 +58,5 @@
 
     <script src="script.js"></script>
 
-    <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/100epa/service-worker.js')
-                    .then(() => console.log('SW registered'))
-                    .catch(err => console.log('SW failed:', err));
-            });
-        }
-    </script>
 </body>
 </html>
